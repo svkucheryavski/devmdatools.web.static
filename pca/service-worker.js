@@ -12,7 +12,6 @@ self.addEventListener('install', (event) => {
         '/pca/pca.wasm',
         '/pca/logo.svg',
         '/pca/icon.png',
-        '/pca/Wines.zip'
       ]);
     })
     .then(() => console.log('Resources cached successfully.'))

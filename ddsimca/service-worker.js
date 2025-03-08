@@ -1,6 +1,6 @@
 // service-worker.js
 const CACHE_NAME = 'ddsimca-cache';
-const CACHE_VERSION = '2.1.1a';
+const CACHE_VERSION = '2.1.2a';
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(`${CACHE_NAME}-${CACHE_VERSION}`).then((cache) => {
@@ -12,7 +12,6 @@ self.addEventListener('install', (event) => {
         '/ddsimca/ddsimca.wasm',
         '/ddsimca/logo.svg',
         '/ddsimca/icon.png',
-        '/ddsimca/Oregano.zip',
       ]);
     })
     .then(() => console.log('Resources cached successfully.'))
