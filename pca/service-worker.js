@@ -45,6 +45,6 @@ self.addEventListener('activate', (event) => {
             return null;
         })
       );
-    }).then(() => self.clients.claim())
+    }).then(() => self.clients.claim()) // this is needed to start controling clients immediately
   );
 });
