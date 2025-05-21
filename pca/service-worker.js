@@ -39,7 +39,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
          cacheNames.map((cacheName) => {
             if (cacheName.startsWith(CACHE_NAME) && cacheName !== `${CACHE_NAME}-${CACHE_VERSION}`) {
-               console.log("deleting cache")
+               // console.log("deleting cache")
                return caches.delete(cacheName);
             }
             return null;
