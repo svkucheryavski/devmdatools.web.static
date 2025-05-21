@@ -2,8 +2,9 @@
 const CACHE_NAME = 'pca-cache';
 const CACHE_VERSION = '2.0.10a';
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(`${CACHE_NAME}-${CACHE_VERSION}`).then((cache) => {
+   self.skipWaiting();
+   event.waitUntil(
+      caches.open(`${CACHE_NAME}-${CACHE_VERSION}`).then((cache) => {
       return cache.addAll([
         '/pca/',
         '/pca/manifest.json',
@@ -44,6 +45,6 @@ self.addEventListener('activate', (event) => {
             return null;
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
 });
