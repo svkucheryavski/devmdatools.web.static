@@ -1,6 +1,6 @@
 // service-worker.js
 const CACHE_NAME = 'pca-cache';
-const CACHE_VERSION = '2.1.2a';
+const CACHE_VERSION = '2.1.3a';
 self.addEventListener('install', (event) => {
    self.skipWaiting();
    event.waitUntil(
