@@ -1,6 +1,6 @@
 // service-worker.js
 const CACHE_NAME = 'nimca-cache';
-const CACHE_VERSION = '1.0.1a';
+const CACHE_VERSION = '1.1.0a';
 self.addEventListener('install', (event) => {
    self.skipWaiting();
    event.waitUntil(
